@@ -21,6 +21,7 @@ The churn model is built with a `RandomForestClassifier`, while customer segment
 - KPI summary for business analysis
 - Data visualization with Matplotlib and Seaborn
 - Model persistence with Joblib
+- Reproducible dependency setup using `requirements.txt`
 
 ## Project Structure
 
@@ -28,6 +29,8 @@ The churn model is built with a `RandomForestClassifier`, while customer segment
 Customer Segmentation Project/
 |-- app.py
 |-- train.py
+|-- customer_segmentation.ipynb
+|-- requirements.txt
 |-- WA_Fn-UseC_-Telco-Customer-Churn.csv
 |-- models/
 |   |-- churn_model.joblib
@@ -46,6 +49,21 @@ WA_Fn-UseC_-Telco-Customer-Churn.csv
 
 The dataset contains customer account information, service subscriptions, billing details, tenure, and churn status.
 
+## Installation
+
+Create and activate a virtual environment:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+Install the required packages from `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Model Training
 
 The `train.py` script performs these steps:
@@ -63,21 +81,6 @@ To train or retrain the models, run:
 
 ```bash
 python train.py
-```
-
-## Installation
-
-Create and activate a virtual environment:
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-```
-
-Install the required packages:
-
-```bash
-pip install streamlit pandas numpy scikit-learn joblib matplotlib seaborn
 ```
 
 ## Running the App
@@ -115,3 +118,4 @@ The segmentation page maps model clusters to these business-friendly labels:
 - Run `train.py` before launching the app if the model files are missing.
 - Keep the CSV dataset in the project root because both `train.py` and `app.py` load it from there.
 - The trained model files are expected inside the `models/` folder.
+- Do not upload your `.venv` folder to GitHub.
