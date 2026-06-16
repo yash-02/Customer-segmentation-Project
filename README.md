@@ -1,4 +1,4 @@
-﻿# Customer Churn and Segmentation Dashboard
+﻿# Customer Churn and Segmentation Using ML
 
 This project is a Streamlit-based machine learning dashboard for analyzing telecom customer churn and grouping customers into useful business segments. It uses the Telco Customer Churn dataset to train a churn prediction model and a K-Means clustering model for customer segmentation.
 
